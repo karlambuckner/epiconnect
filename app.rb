@@ -22,3 +22,7 @@ end
 get('/add_event') do
   erb(:add_event)
 end
+
+get('/add_user') do
+  erb(:add_user)
+end
