@@ -12,6 +12,11 @@ get('/add_event') do
   erb(:add_event)
 end
 
+get('/hangout_events') do
+  @events = Event.all()
+  erb(:add_event)
+end
+
 post('/add_event') do
   name = params['name']
   @category= Category.all
