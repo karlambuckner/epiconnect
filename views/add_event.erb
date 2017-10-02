@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <form class="" action="/add_event" method="post">
+         <select id="select_cat" name="category" type="text">
+           <% @catergory.each do |category| %>
+      <option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+        </select>
+
+      </form>
+    </div>
+  </div>
+</div>

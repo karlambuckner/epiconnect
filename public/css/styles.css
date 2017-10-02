@@ -1,0 +1,47 @@
+.jumbotron {
+  text-align: center;
+  padding: 0px;
+  background-color: #eae1da;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #eae1da;
+  color: #DFD6E1;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  border: 0px;
+  padding: 20px;
+  background-color: #7F78AC;
+  border-radius: 10px;
+}
+
+.nested_card {
+  color: #4D276E;
+  padding: 20px;
+  background-color: #f2dbc9;
+}
+
+#logo {
+  height: 200px;
+  width: auto;
+}
+
+.btn-primary {
+  border: 0px;
+  color: #DFD6E1;
+  background-color: #583477;
+}
+
+.btn-primary:hover {
+  background-color: #eae1da;
+   color: #cea98a;
+ }
+
+#second_row .card{
+  background-color: #cea98a;
+  border-radius: 10px;
+}
