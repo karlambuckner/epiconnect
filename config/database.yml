@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: epiconnect_development
+
+test:
+  adapter: postgresql
+  database: epiconnect_test
