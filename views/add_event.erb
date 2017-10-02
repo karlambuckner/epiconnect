@@ -1,13 +1,33 @@
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-12">
     <div class="card">
       <form class="" action="/add_event" method="post">
-         <select id="select_cat" name="category" type="text">
-           <% @catergory.each do |category| %>
-      <option value="<%= category.id %>"><%= category.name %></option>
-    <% end %>
+        <label for="title">Title of event: </label>
+        <input type="text" name="title">
+
+        <label for="location">Location: </label>
+        <input type="text" name="location">
+
+        <label for="host">Hosted by: </label>
+        <input type="text" name="host">
+
+        <label for="when">Date and time: </label>
+        <input type="text" name="when">
+
+        <label for="desription">Event description: </label>
+        <input type="text" name="description">
+
+        <label for="category">Event type: </label>
+        <select class="select" name="category">
+          <option value="hangout">Hangout</option>
+          <option value="study">Study</option>
+          <option value="network">Network</option>
         </select>
 
+        <div>
+          <br>
+        <button class="btn btn-primary" type="submit" name="submit">Create Event!</button>
+        </div>
       </form>
     </div>
   </div>

@@ -2,24 +2,14 @@
   <div class="col-sm-12">
     <div class="card">
       <h1>Hangout Events</h1>
-      <% if @events.category.name.eql?("hangout").any?()%>
-        <h3>Here are all the Hangout Events:</h3>
-
-        <ul>
-          <% @events.category.name.eql?("hangout").each() do |event| %>
-            <li><%= event.name() %></li>
-            <% end %>
-        </ul>
-
-        <% else %>
-          <p>There are no hangout events yet!</p>
-        <% end %>
     </div>
+    <br>
     <div class="card">
       <a href="/add_event"><button class="btn btn-primary" type="submit">Add a New Event</button></a>
     </div>
     <br>
     <div class="card">
-      <a href="/"><button type="btn btn_primaty" name="button">Return to Home</button></a>
+      <a href="/"><button type="btn btn_primary" name="button">Return to Home</button></a>
     </div>
   </div>
+</div>

@@ -45,3 +45,12 @@ body {
   background-color: #cea98a;
   border-radius: 10px;
 }
+
+label, input {
+    padding: 0px;
+    display: block;
+}
+
+label {
+    margin-top: 30px;
+}

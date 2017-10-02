@@ -7,24 +7,18 @@ get('/') do
   erb(:index)
 end
 
-get('/add_event') do
-  @events = Event.all()
-  erb(:add_event)
-end
-
 get('/hangout_events') do
-  @events = Event.all()
-  erb(:add_event)
+  erb(:hangout_events)
 end
 
-post('/add_event') do
-  name = params['name']
-  @category= Category.all
-  erb(:add_event)
+get('/study_events') do
+  erb(:study_events)
 end
 
-post('/hangout_events') do
-  @events = Event.all()
-  @event = Event.find(params["id"])
-  redirect('/add_event')
+get('/network_events') do
+  erb(:network_events)
+end
+
+get('/add_event') do
+  erb(:add_event)
 end
