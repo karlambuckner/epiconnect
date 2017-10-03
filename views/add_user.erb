@@ -1,9 +1,9 @@
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-6">
     <div class="card">
       <form class="" action="/add_user" method="post">
-        <label for="title">Name: </label>
-        <input type="text" name="title">
+        <label for="name">Name: </label>
+        <input type="text" name="name">
 
         <div>
           <br>
@@ -11,6 +11,23 @@
         </div>
       </form>
     </div>
+    <br>
     <a href="/"><button class="btn btn-primary" name="home">Return Home</button></a>
+  </div>
+
+
+<div class="col-sm-6">
+  <div class="list_div" id="user_list_div">
+    <h3>All Users:</h3>
+    <br>
+    <ul>
+      <% if @users.any? %>
+        <% @users.each do |user| %>
+          <h5><a href="/user/<%= user.id %>"><li><%= user.name %></li></a></h5>
+        <% end %>
+      <% else %>
+        <p>There are currently no users.</p>
+      <% end %>
+    </ul>
   </div>
 </div>

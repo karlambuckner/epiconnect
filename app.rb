@@ -25,7 +25,41 @@ get('/add_event') do
 end
 
 get('/add_user') do
+  @users = User.all()
   erb(:add_user)
+end
+
+get('/event/:id') do
+  @users = User.all()
+  @events = Event.all()
+  @event = Event.find(params[:id])
+  erb(:event)
+end
+
+get('/user/:id') do
+  @users = User.all()
+  @user = User.find(params[:id])
+  erb(:user)
+end
+
+post('/add_user') do
+  name = params["name"]
+  @user = User.create({:name => name})
+  @users = User.all()
+  erb(:add_user)
+end
+
+post('/event/:id') do
+  @users = User.all()
+  @events = Event.all()
+  @event = Event.find(params[:id])
+  erb(:event)
+end
+
+post('/user/:id') do
+  @users = User.all()
+  @user = User.find(params[:id])
+  erb(:user)
 end
 
 post('/add_event') do

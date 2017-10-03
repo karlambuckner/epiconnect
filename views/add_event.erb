@@ -34,17 +34,19 @@
     <br>
     <a href="/"><button class="btn btn-primary" name="home">Return Home</button></a>
   </div>
-  <div class="col-sm-6" id="event_list_div">
+  <div class="col-sm-6">
+    <div class="list_div" id="event_list_div">
     <h3>All Events:</h3>
     <br>
-        <ul>
-          <% if @events.any? %>
-            <% @events.each do |event| %>
-              <h5><a href="/event/<%= event.id %>"><li><%= event.title %></li></a></h5>
-            <% end %>
-          <% else %>
-            <p>There are currently no events.</p>
+      <ul>
+        <% if @events.any? %>
+          <% @events.each do |event| %>
+            <h5><a href="/event/<%= event.id %>"><li><%= event.title %></li></a></h5>
           <% end %>
-        </ul>
+        <% else %>
+          <p>There are currently no events.</p>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

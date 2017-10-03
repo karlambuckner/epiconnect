@@ -1,0 +1,31 @@
+<div class="row">
+
+  <div class="col-sm-4">
+    <div class="list_div">
+      <h1> <%= @event.title %> </h1>
+      <h3> <%= @event.location %> </h3>
+      <h3> <%= @event.host %> </h3>
+      <h3> <%= @event.when %> </h3>
+      <h3> <%= @event.description %> </h3>
+      <h3> Event Category: <%= @event.category %> </h3>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="list_div" id="event_user_list">
+      <ul>
+        <% if @event.users.any? %>
+          <% @event.users.each do |user| %>
+            <h5><a href="/user/<%= user.id %>"><li><%= user.name %></li></a></h5>
+          <% end %>
+        <% else %>
+          <p>There are currently no users planning to attend.</p>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+    </div>
+  </div>
+</div>
+    <a href="/"><button class="btn btn-primary" name="button">Return Home</button></a>

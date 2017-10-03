@@ -58,24 +58,32 @@ label, input {
   display: block;
 }
 
-label {
+.list_div {
+  color: #7F78AC !important;
+}
 
+.list_div a {
+  color: #583477 !important;
+}
+
+.list_div a:hover {
+  background-color: #eae1da !important;
+  color: #cea98a !important;
 }
 
 #event_list_div {
   padding-top: 50px;
   padding-left: 100px;
-  color: #7F78AC;
 }
 
-#event_list_div a{
-  color: #583477;
+#user_list_div {
+  padding-left: 100px;
 }
 
-#event_list_div a:hover {
-  background-color: #eae1da;
-   color: #cea98a;
- }
+#event_user_list {
+  padding-top: 50px;
+  padding-left: 100px;
+}
 
 ul {
   list-style: none;
