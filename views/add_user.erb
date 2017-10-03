@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     <div class="card">
       <form class="" action="/add_user" method="post">
         <label for="name">Name: </label>
@@ -16,7 +16,7 @@
   </div>
 
 
-<div class="col-sm-6">
+<div class="col-sm-4">
   <div class="list_div" id="user_list_div">
     <h3>All Users:</h3>
     <br>
@@ -30,4 +30,21 @@
       <% end %>
     </ul>
   </div>
+</div>
+
+<div class="col-sm-4">
+  <div class="list_div" id="event_list_div">
+    <h3>All Events:</h3>
+    <br>
+    <ul>
+      <% if @events.any? %>
+        <% @events.each do |event| %>
+          <h5><a href="/event/<%= event.id %>"><li><%= event.title %></li></a></h5>
+        <% end %>
+      <% else %>
+        <p>There are currently no events.</p>
+      <% end %>
+    </ul>
+  </div>
+</div>
 </div>

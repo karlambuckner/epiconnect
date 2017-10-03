@@ -25,6 +25,7 @@ get('/add_event') do
 end
 
 get('/add_user') do
+  @events = Event.all()
   @users = User.all()
   erb(:add_user)
 end
@@ -45,6 +46,7 @@ end
 post('/add_user') do
   name = params["name"]
   @user = User.create({:name => name})
+  @events = Event.all()
   @users = User.all()
   erb(:add_user)
 end
