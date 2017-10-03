@@ -99,3 +99,15 @@ form {
     width: 75%;
     display: inline-block;
 }
+
+#hangout_list {
+  color: #eae1da !important;
+}
+
+#network_list {
+  color: #eae1da !important;
+}
+
+#study_list {
+  color: #eae1da !important;
+}

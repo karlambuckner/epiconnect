@@ -2,6 +2,21 @@
   <div class="col-sm-12">
     <div class="card">
       <h1>Hangout Events</h1>
+      <div class="list_div" id="hangout_list">
+        <ul>
+          <% if @events.any? %>
+            <% @events.each do |event| %>
+              <% if event.category.eql?('hangout') %>
+              <ul>
+                <a href='/event/<%=event.id%>'><li><%= event.title %></li></a>
+              </ul>
+              <% end %>
+            <% end %>
+          <% else %>
+            <p>There are currently no Hangout events.</p>
+          <% end %>
+        </ul>
+      </div>
     </div>
     <br>
     <div class="card">

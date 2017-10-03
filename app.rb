@@ -8,14 +8,17 @@ get('/') do
 end
 
 get('/hangout_events') do
+  @events = Event.all()
   erb(:hangout_events)
 end
 
 get('/study_events') do
+  @events = Event.all()
   erb(:study_events)
 end
 
 get('/network_events') do
+  @events = Event.all()
   erb(:network_events)
 end
 
@@ -42,6 +45,24 @@ get('/user/:id') do
   @events = Event.all()
   @user = User.find(params[:id])
   erb(:user)
+end
+
+post('/hangout_events') do
+  @events = Event.all()
+  hangout_event = @event.category.title
+  erb(:hangout_events)
+end
+
+post('/study_events') do
+  @events = Event.all()
+  study_event = @event.category.title
+  erb(:study_events)
+end
+
+post('/network_events') do
+  @events = Event.all()
+  network_event = @event.category.title
+  erb(:network_events)
 end
 
 post('/add_user') do
