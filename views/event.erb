@@ -25,12 +25,18 @@
   </div>
   <div class="col-sm-4">
     <div class="card">
-      <form action="/search_users" method="post">
-        <div class="form-group">
-          <h4><label for="search_user" class="form-label">Search Users:</label></h4>
-          <input type="text" name="search_user" class="form-control" id="search_user" required>
-          <br>
-          <button type="submit" class="btn btn-primary">Search USers</button>
+      <form action="/event/<%=@event.id%>/edit" method="post">
+      <label for="new_user">RSVP with your name!</label>
+          <select id='new_user' name='new_user' type='text'>
+            <% @users.each() do |user| %>
+              <option value="<%= user.id()%>"> <%= user.name %> </option>
+            <% end %>
+          </select>
+        <button type="submit" class="btn btn-primary">Add User</button>
+      </form>
+      <h5>or</h5>
+      <a href="/add_user"><button class="btn btn-primary" name="button">Create New Account</button></a>
+
         </div>
       </form>
     </div>

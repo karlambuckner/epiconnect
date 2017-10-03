@@ -73,3 +73,11 @@ post('/add_event') do
   @events = Event.all()
   erb(:add_event)
 end
+
+post("/event/:id/edit") do
+  @event = Event.find(params[:id])
+  @event.users.push(User.find(params['new_user']))
+  @event_users = @event.users
+  @users = User.all
+  redirect back
+end
