@@ -20,9 +20,22 @@ get('/network_events') do
 end
 
 get('/add_event') do
+  @events = Event.all()
   erb(:add_event)
 end
 
 get('/add_user') do
   erb(:add_user)
+end
+
+post('/add_event') do
+  title = params["title"]
+  location = params["location"]
+  host = params["host"]
+  time = params["when"]
+  description = params["description"]
+  category = params["category"]
+  @event = Event.create({:title => title, :location => location, :host => host, :when => time, :description => description, :category => category})
+  @events = Event.all()
+  erb(:add_event)
 end

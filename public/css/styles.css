@@ -25,6 +25,12 @@ body {
   background-color: #f2dbc9;
 }
 
+.list_card {
+  color: #4D276E;
+  padding: 50px;
+  background-color: white;
+}
+
 #logo {
   height: 200px;
   width: auto;
@@ -47,10 +53,30 @@ body {
 }
 
 label, input {
-    padding: 0px;
-    display: block;
+  width: 380px;
+  padding-left: 0px;
+  display: block;
 }
 
 label {
-    margin-top: 30px;
+
+}
+
+#event_list_div {
+  padding-top: 50px;
+  padding-left: 100px;
+  color: #7F78AC;
+}
+
+#event_list_div a{
+  color: #583477;
+}
+
+#event_list_div a:hover {
+  background-color: #eae1da;
+   color: #cea98a;
+ }
+
+ul {
+  list-style: none;
 }
