@@ -1,3 +1,40 @@
-<h1> <%= @user.name %> </h1>
+<div class="row">
 
-<a href="/"><button type="button" name="button">Return Home</button></a>
+  <div class="col-sm-4">
+    <div class="list_div">
+      <h1> <%= @user.name %> </h1>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="list_div" id="user_event_list">
+      <ul>
+        <% if @user.events.any? %>
+          <% @user.events.each do |event| %>
+            <h5><a href="/event/<%= event.id %>"><li><%= event.title %></li></a></h5>
+          <% end %>
+        <% else %>
+          <p>No events to show.</p>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <form action="/user/<%=@user.id%>/edit" method="post">
+      <label for="new_event">Select Event:</label>
+          <select id='new_event' name='new_event' type='text'>
+            <% @events.each() do |event| %>
+              <option value="<%= event.id()%>"> <%= event.title %> </option>
+            <% end %>
+          </select>
+        <button type="submit" class="btn btn-primary">Add Event</button>
+      </form>
+      <h5>or</h5>
+      <a href="/add_event"><button class="btn btn-primary" name="button">Create New Event</button></a>
+
+    </div>
+  </div>
+</div>
+    <a href="/"><button class="btn btn-primary" name="button">Return Home</button></a>

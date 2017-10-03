@@ -39,6 +39,7 @@ end
 
 get('/user/:id') do
   @users = User.all()
+  @events = Event.all()
   @user = User.find(params[:id])
   erb(:user)
 end
@@ -60,6 +61,7 @@ end
 
 post('/user/:id') do
   @users = User.all()
+  @events = Event.all()
   @user = User.find(params[:id])
   erb(:user)
 end
@@ -81,5 +83,13 @@ post("/event/:id/edit") do
   @event.users.push(User.find(params['new_user']))
   @event_users = @event.users
   @users = User.all
+  redirect back
+end
+
+post("/user/:id/edit") do
+  @user = User.find(params[:id])
+  @user.events.push(Event.find(params['new_event']))
+  @user_events = @user.events
+  @events = Event.all
   redirect back
 end
