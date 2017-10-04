@@ -112,19 +112,24 @@ form {
   color: #eae1da !important;
 }
 
-footer {
+.footer {
     background-color: #8e308d;
     color: #DFD6E1;
     font-size: 14px;
     text-transform: uppercase;
     font-family: FuturaStd-Heavy;
     letter-spacing: .18em;
+    overflow: hidden;
+    height: 325px;
+    width: 100%;
+    bottom:0;
+    position: absolute;
 }
 
-footer a {
+.footer a {
   color: #583477;
 }
 
-footer a:hover {
-  color: #cea98a !important;
+#footer_logo {
+  border-radius: 30px;
 }
