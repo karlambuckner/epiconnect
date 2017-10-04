@@ -9,6 +9,16 @@ describe("adding a user", {:type => :feature}) do
     expect(page).to have_content("Gabrijela")
   end
 end
+
+describe("adding an event", {:type => :feature}) do
+  it ("allows user to add an event then displays the list of current events") do
+    visit("/")
+    click_link("Add a new event")
+    fill_in("title", :with => "BBQ")
+    click_button("Create Event!")
+    expect(page).to have_content("BBQ")
+  end
+end
 #
 # describe("viewing the store info", {:type => :feature}) do
 #   it ("allows a user to view a store's details") do
