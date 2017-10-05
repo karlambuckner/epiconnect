@@ -32,7 +32,7 @@ body {
 }
 
 #logo {
-  height: 200px;
+  height: 300px;
   width: auto;
 }
 
@@ -119,10 +119,14 @@ form {
     text-transform: uppercase;
     font-family: FuturaStd-Heavy;
     letter-spacing: .18em;
-    height: 325px;
+    height: 300px;
     width: 100%;
-    bottom:0;
-    position: absolute;
+    bottom: 0;
+}
+
+.footer img {
+  border-radius: 5px;
+  opacity: 0.9;
 }
 
 .footer a {
@@ -131,4 +135,25 @@ form {
 
 #footer_logo {
   border-radius: 30px;
+}
+
+/* The navigation bar */
+.navbar {
+
+    background-color: #53b29e;
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.navbar a:hover{
+  color: #cea98a !important;
+}
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #583477;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
