@@ -9,6 +9,13 @@
       <h3> <%= @event.description %> </h3>
       <h3> Event Category: <%= @event.category %> </h3>
     </div>
+
+    <form action="/event/<%=@event.id%>/delete" method="post">
+      <input name="_method" type="hidden" value="delete">
+      <button class="btn btn-primary" type="submit">Remove <%= @event.title %></button>
+    </form>
+    <br>
+    <br>
     <a href="/"><button class="btn btn-primary" name="button">Return Home</button></a>
   </div>
   <div class="col-sm-4">

@@ -107,6 +107,17 @@ post("/event/:id/edit") do
   redirect back
 end
 
+delete("/event/:id/delete") do
+  @event = Event.find(params[:id])
+  @event.delete()
+  redirect("/")
+end
+
+delete("/user/:id/delete") do
+  @user = User.find(params[:id])
+  @user.delete()
+  redirect("/")
+end
 post("/user/:id/edit") do
   @user = User.find(params[:id])
   @user.events.push(Event.find(params['new_event']))
