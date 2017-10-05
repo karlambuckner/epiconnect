@@ -10,7 +10,7 @@ body {
   color: #DFD6E1;
   height: 100% !important;
   min-height: 100% !important;
-  margin bottom: 0 auto -300px
+  margin bottom: 0 auto -300px;
 }
 
 .card {
@@ -105,18 +105,47 @@ form {
   color: #eae1da !important;
 }
 
-.footer {
-    background-color: #53b29e;
-    color: #DFD6E1;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: FuturaStd-Heavy;
-    letter-spacing: .18em;
-    height: 375px;
-    width: 100%;
-    bottom: 0;
-    margin-top: 10px;
-    position: relative;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 30%;
+}
+
+#main {
+  overflow: auto;
+  /* must be same height as the footer */
+}
+
+#footer {
+  background-color: #53b29e;
+  color: #DFD6E1;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: FuturaStd-Heavy;
+  letter-spacing: .18em;
+  height: 375px;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+}
+
+
+/* Opera Fix thanks to Maleika (Kohoutec) */
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  /* thank you Erik J - negate effect of float*/
 }
 
 .footer img {
@@ -184,7 +213,6 @@ form {
 #copyright {
   float: right;
   padding-right: 20px;
-  padding-bottom: 20px;
 }
 
 #purp {
