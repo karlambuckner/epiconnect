@@ -112,7 +112,7 @@ form {
     text-transform: uppercase;
     font-family: FuturaStd-Heavy;
     letter-spacing: .18em;
-    height: 350px;
+    height: 375px;
     width: 100%;
     bottom: 0;
     margin-top: 10px;
@@ -129,7 +129,7 @@ form {
 }
 
 .footer a:hover {
-  color:
+  color: #DFD6E1;
 }
 .contact {
     overflow: hidden;
@@ -137,7 +137,7 @@ form {
     bottom: 0;
     left: 0;
     right: 0;
-    color: #aaa;
+    color: #DFD6E1;;
     visibility: hidden;
     opacity: 0;
     margin: 0;
@@ -148,13 +148,8 @@ form {
     opacity: 1;
 }
 
-#footer_logo {
-  border-radius: 30px;
-}
-
 /* The navigation bar */
 .navbar {
-
     background-color: #53b29e;
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -188,8 +183,8 @@ form {
 
 #copyright {
   float: right;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 #purp {
@@ -237,7 +232,13 @@ form {
 }
 
 #border {
-  border-style: solid;
-  border-color: #742087;
-  border-width: 7px;
+  border-radius: 30px;
+  border-color: #53b29e;
+  border-style: double;
+  border-width: 10px;
+}
+
+#nav {
+  color: #583477;
+  background-color: #DFD6E1;
 }
