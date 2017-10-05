@@ -9,9 +9,11 @@
       <h3> <%= @event.description %> </h3>
       <h3> Event Category: <%= @event.category %> </h3>
     </div>
+    <a href="/"><button class="btn btn-primary" name="button">Return Home</button></a>
   </div>
   <div class="col-sm-4">
-    <div class="list_div" id="event_user_list">
+    <div class="col_sm-4 list_div" id="event_user_list">
+      <h3>Users going to the event</h3>
       <ul>
         <% if @event.users.any? %>
           <% @event.users.each do |user| %>
@@ -26,7 +28,8 @@
   <div class="col-sm-4">
     <div class="card">
       <form action="/event/<%=@event.id%>/edit" method="post">
-      <label for="new_user">RSVP with your name!</label>
+        <% if @users.any? %>
+        <h5><label for="new_user">RSVP with your name!</label></h5>
           <select id='new_user' name='new_user' type='text'>
             <% @users.each() do |user| %>
               <option value="<%= user.id()%>"> <%= user.name %> </option>
@@ -34,12 +37,13 @@
           </select>
         <button type="submit" class="btn btn-primary">Add User</button>
       </form>
-      <h5>or</h5>
+      <br>
+      <br>
+        <% end %>
+      <h5>Create a new account</h5>
       <a href="/add_user"><button class="btn btn-primary" name="button">Create New Account</button></a>
-
         </div>
       </form>
     </div>
   </div>
 </div>
-    <a href="/"><button class="btn btn-primary" name="button">Return Home</button></a>

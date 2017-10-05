@@ -8,6 +8,9 @@ body {
   font-family: 'Raleway', sans-serif;
   background-color: #eae1da;
   color: #DFD6E1;
+  height: 100% !important;
+  min-height: 100% !important;
+  margin bottom: 0 auto -300px
 }
 
 .card {
@@ -71,17 +74,7 @@ label, input {
   color: #cea98a !important;
 }
 
-#event_list_div {
-  padding-top: 50px;
-  padding-left: 100px;
-}
-
 #user_list_div {
-  padding-left: 100px;
-}
-
-#event_user_list {
-  padding-top: 50px;
   padding-left: 100px;
 }
 
@@ -113,15 +106,15 @@ form {
 }
 
 .footer {
-    background-color: #53b29e;
-    color: #DFD6E1;
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: FuturaStd-Heavy;
-    letter-spacing: .18em;
-    height: 300px;
-    width: 100%;
-    bottom: 0;
+  background-color: #53b29e;
+  color: #DFD6E1;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: FuturaStd-Heavy;
+  letter-spacing: .18em;
+  height: 300px;
+  width: 100%;
+  bottom: 0;
 }
 
 .footer img {
