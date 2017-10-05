@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Epiconnect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='/css/bootstrap.css' type='text/css'>
     <link rel='stylesheet' href='/css/styles.css' type='text/css'>
     <script src="js/jquery-3.2.1.js"></script>
@@ -10,13 +12,19 @@
   </head>
   <body>
 
+  <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/hangout_events">Hangout</a>
+    <a href="/network_events">Network</a>
+    <a href="/study_events">Study</a>
+  </div>
+
     <div class='container'>
       <div class='jumbotron'>
         <img id="logo" src="img/epiconnect_logo_v02.png" alt="Epiconnect logo">
       </div>
       <%= yield %>
     </div>
-
     <br>
     <br>
     <div class="footer">
@@ -37,9 +45,10 @@
                 <!--Second column-->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h6 class="title mb-4 font-bold">Useful Resources</h6>
-                    <p><a href="https://www.epicodus.com/" target="_blank"><img id="epicodus_logo" src="img/purple_epicodus.png" alt="Epicodus logo purple"></a></p>
-                    <p><a href="https://www.learnhowtoprogram.com/" target="_blank"><img id="epicodus_logo_reg" src="img/epicodus.png" alt="Epicodus logo"></a></p>
-                    <p><a href="https://slack.com/" target="_blank"><img id="slack_logo" src="img/purple_slack.png" alt="Slack logo"></a></p>
+
+                    <p><a href="https://www.epicodus.com/" target="_blank"><img border="0" alt="epicodus" src="img/Epicodus.png" width="auto" height="50"></a></p>
+                    <p><a href="https://slack.com/" target="_blank"><img border="0" alt="slack" src="img/slack-logo.png" width="auto" height="50"></a></p>
+
                 </div>
                 <!--/.Second column-->
 
@@ -48,9 +57,11 @@
                   <br>
                   <br>
                   <br>
-                  <p><a href="https://www.meetup.com/" target="_blank"><img id="meetup_logo" src="img/purple_meetup.png" alt="Meetup logo"></a></p>
-                  <p><a href="https://www.metaltoad.com/" target="_blank"><img id="metaltoad_logo" src="img/purple_metaltoad.png" alt="Metaltoad logo"></a></p>
-                  <p><a href="https://www.github.com/" target="_blank"><img id="github_logo" src="img/purple_git.png" alt="github logo"></a></p>
+
+                  <p><a href="https://www.meetup.com/" target="_blank"><img border="0" alt="meetup" src="img/meetup_logo.png" width="auto" height="50"></a></p>
+                  <p><a href="https://www.metaltoad.com/" target="_blank"><img border="0" alt="metaltoad" src="img/toad.png" width="auto" height="50"></a></p>
+                  <p><a href="https://www.github.com/" target="_blank"><img border="0" alt="github" src="img/git.jpg" width="auto" height="50"></a></p>
+
                 </div>
 
                 <!--Third column-->
