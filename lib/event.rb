@@ -2,7 +2,9 @@ class Event < ActiveRecord::Base
   has_many :details
   has_many :users, through: :details
   has_many :categories, through: :details
-  # validates(:title, {:presence => true, length => {:maximum => 40}})
+  validates :title, :presence => true
+
+
   # validates(:title, uniqueness: { case_sensitive: false})
   # before_save(:upcase_title)
   #
