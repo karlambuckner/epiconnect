@@ -3,7 +3,10 @@
 ## By Karla Buckner, Sarah Lindmar, Sara Spink, and Gabrijela Gavric
 
 ## Description/User Stories:
-- Epicodus students can post info about various events
+- Epicodus students can post info about upcoming events; meetups, social events, and study sessions.
+- Students can add themselves as a user and view all events they have RSVP'd for
+- Users can add an event by category
+- Users can view an individual event to see its details
 
 
 ## Setup/Installation:
