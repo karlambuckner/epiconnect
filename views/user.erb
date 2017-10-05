@@ -4,6 +4,13 @@
     <div class="list_div">
       <h1> <%= @user.name %> </h1>
     </div>
+    <form action="/user/<%=@user.id%>/delete" method="post">
+      <input name="_method" type="hidden" value="delete">
+      <button class="btn btn-primary" type="submit">Remove <%= @user.name %></button>
+    </form>
+    <br>
+    <br>
+    <a href="/"><button class="btn btn-primary" name="button">Return Home</button></a>
   </div>
 
   <div class="col-sm-4">
@@ -18,6 +25,7 @@
         <% end %>
       </ul>
     </div>
+
   </div>
 
   <div class="col-sm-4">
@@ -36,5 +44,5 @@
 
     </div>
   </div>
-  <a href="/"><button class="btn btn-primary" name="button">Return Home</button></a>
+
 </div>
