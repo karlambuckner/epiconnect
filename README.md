@@ -1,5 +1,7 @@
 # _Epiconnect_
 
+<img width="1819" alt="screen shot 2017-11-16 at 2 28 16 pm" src="https://user-images.githubusercontent.com/27794720/32919528-0cc40dec-cadb-11e7-82a5-29c24d46433c.png">
+
 ## By Karla Buckner, Sarah Lindmar, Sara Spink, and Gabrijela Gavric
 
 ## Description/User Stories:
